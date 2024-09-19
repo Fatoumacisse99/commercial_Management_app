@@ -19,7 +19,7 @@
       </div>
       <div class="col-md-6">
         <label for="inputNumber4" class="form-label">Track Number</label>
-        <input type="number" class="form-control" id="inputNumber4" />
+        <input type="text" class="form-control" id="inputNumber4" />
       </div>
       <div class="col-md-6 offset-6">
         <label for="inputOrder4" class="form-label">Order Status</label>
