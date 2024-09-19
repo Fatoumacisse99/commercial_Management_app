@@ -7,13 +7,13 @@
     <div class="container collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto  me-3">
         <li class="nav-item active">
-          <router-link class="nav-link" to='/' ><i class="fa-solid fa-users icon-spacing"></i>Customers</router-link>
-        </li>
-        <!-- <li class="nav-item">
-          <router-link class="nav-link" to="/products"> <i class="fa-solid fa-box-open"></i> Products </router-link>
+          <router-link class="nav-link" to='/' ><i class="fa-solid fa-users mx-2"></i>Customers</router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" to="/orders"> <i class="fa-solid fa-cart-shopping"></i> Orders </router-link>
+          <router-link class="nav-link" to="/list-product"> <i class="fa-solid fa-box-open mx-2"></i> Products </router-link>
+        </li>
+        <!-- <li class="nav-item">
+          <router-link class="nav-link" to="/orders"> <i class="fa-solid fa-cart-shopping mx-2"></i> Orders </router-link>
         </li> -->
       </ul>
     </div>

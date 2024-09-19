@@ -3,6 +3,7 @@ import ListCustomer from '../components/customers/ListCustomer.vue';
 import AjouterCustomer from '../components/customers/AjouterCustomer.vue';
 import ModifieCustomer from '../components/customers/ModifierCustomer.vue';
 import DetailCustomer from '../components/customers/DetailCustomer.vue';
+import ListProduct from '../components/products/ListProduct.vue';
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/detail-customer/:id',
     name: 'DetailCustomer',
     component: DetailCustomer,
+  },
+  {
+    path: '/list-product',
+    name: 'ListProduct',
+    component: ListProduct,
   },
 ];
 

@@ -62,6 +62,8 @@
   </script>
   
   <style scoped>
-  /* Ajoutez vos styles ici si nécessaire */
+.close{
+    margin-right: 20px;
+}
   </style>
   
