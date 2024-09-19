@@ -1,12 +1,12 @@
 <template>
     <div>
-      <div class="modal fade show" style="display: block;" tabindex="-1" role="dialog" aria-labelledby="addCustomerModalLabel" aria-hidden="true">
+      <div class="modal fade show mt-5" style="display: block;" tabindex="-1" role="dialog" aria-labelledby="addCustomerModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="addCustomerModalLabel">Create New Customer</h5>
-              <button type="button" class="close" data-dismiss="modal" @click="closeModal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+              <button type="button" class="btn-close"  @click="closeModal">
+                <span aria-hidden="true"></span>
               </button>
             </div>
             <div class="modal-body">

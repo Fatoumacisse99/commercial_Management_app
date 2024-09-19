@@ -1,18 +1,18 @@
 <template>
     <div>
-      <div class="modal fade show" style="display: block;" tabindex="-1" role="dialog" aria-labelledby="customerDetailModalLabel" aria-hidden="true">
+      <div class="modal fade show mt-5" style="display: block;" tabindex="-1" role="dialog" aria-labelledby="customerDetailModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="customerDetailModalLabel">Customer Details</h5>
-              <button type="button" class="close" @click="closeModal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+              <button type="button" class="btn-close" @click="closeModal">
+                <span aria-hidden="true"></span>
               </button>
             </div>
             <div class="modal-body">
               <form>
-                <div class="form-group">
-                  <label for="customer-name" class="col-form-label">Customer Name:</label>
+                <div class="form-group d-flex flex-column">
+                  <label for="customer-name" class="col-form-label ">Customer Name:</label>
                   <input type="text" class="form-control" v-model="customer.name" id="customer-name" disabled />
                 </div>
                 <div class="form-group">
