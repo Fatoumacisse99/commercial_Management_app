@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-// import router from './router';
+import router from './router';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -14,9 +14,10 @@ library.add(far);
 import { dom } from "@fortawesome/fontawesome-svg-core";
 dom.watch();
 
-const app = createApp(App);
 
+const app =createApp(App)
 app.component("font-awesome-icon", FontAwesomeIcon);
-app.mount('#app');
-// app.use(router);
+app.use(router)
+app.mount('#app')
+
 

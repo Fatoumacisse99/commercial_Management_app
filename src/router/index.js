@@ -1,21 +1,35 @@
-// import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory } from 'vue-router';
+import ListCustomer from '../components/customers/ListCustomer.vue';
+import AjouterCustomer from '../components/customers/AjouterCustomer.vue';
+import ModifieCustomer from '../components/customers/ModifierCustomer.vue';
+import DetailCustomer from '../components/customers/DetailCustomer.vue';
 
-// import AjouterCustomer from "../components/customers/Ajoutercustomer.vue";
+const routes = [
+  {
+    path: '/',
+    name: 'ListCustomer',
+    component: ListCustomer,
+  },
+  {
+    path: '/ajout-customer',
+    name: 'AjouterCustomer',
+    component: AjouterCustomer,
+  },
+  {
+    path: '/modifie-customer/:id',
+    name: 'ModifieCustomer',
+    component: ModifieCustomer,
+  },
+  {
+    path: '/detail-customer/:id',
+    name: 'DetailCustomer',
+    component: DetailCustomer,
+  },
+];
 
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes,
+});
 
-// const routes = [
-//   { path: "/", name: "ListeProjets", component: ListeProjet },
-//   { path: "/ajouter-customer", name: "Ajoutercustomer", component: AjouterCustomer },
-//   { path: "/modifier-projet/:id", name: "ModifierProjet", component: ModifierProjet,},
-//   { path: "/detail-projet", name: "DetailProjet", component: DetailProjet },
-
-  
-
-// ];
-
-// const router = createRouter({
-//   history: createWebHistory(),
-//   routes,
-// });
-
-// export default router;
+export default router;
