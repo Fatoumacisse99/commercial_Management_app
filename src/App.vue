@@ -10,7 +10,7 @@
           <router-link class="nav-link" to='/' ><i class="fa-solid fa-users mx-2"></i>Customers</router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" to="/list-product"> <i class="fa-solid fa-box-open mx-2"></i> Products </router-link>
+          <router-link class="nav-link  " to="/list-product"> <i class="fa-solid fa-box-open mx-2"></i> Products </router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link" to="/orders"> <i class="fa-solid fa-cart-shopping mx-2"></i> Orders </router-link>
@@ -23,3 +23,7 @@
 
 
 <script setup></script>
+<style scoped>
+
+a:hover {color: rgb(42, 85, 240);}
+</style>

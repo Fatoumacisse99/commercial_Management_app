@@ -1,11 +1,11 @@
 <template>
-    <div class="modal fade show" style="display: block;" tabindex="-1" role="dialog" aria-labelledby="editProductModalLabel" aria-hidden="true">
+    <div class="modal fade show mt-5" style="display: block;" tabindex="-1" role="dialog" aria-labelledby="editProductModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="editProductModalLabel">Edit Product</h5>
-            <button type="button" class="close offset-8" @click="closeModal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+            <button type="button" class="btn-close offset-8" @click="closeModal" aria-label="Close">
+              <span aria-hidden="true"></span>
             </button>
           </div>
           <div class="modal-body">
@@ -13,7 +13,7 @@
               <div class="row mb-3">
                 <div class="col">
                   <label for="product-name" class="form-label">Product Name</label>
-                  <input type="text" class="form-control" v-model="product.name" id="product-name" required />
+                  <input type="text" class="form-control" v-model="product.name" id="product-name" disabled />
                 </div>
                 <div class="col">
                   <label for="product-category" class="form-label">Category</label>
