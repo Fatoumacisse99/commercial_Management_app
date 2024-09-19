@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2>List of Customers</h2>
+    <h2 class="mt-3">List of Customers</h2>
     <div class="d-flex justify-content-end mb-4">
       <button class="btn btn-primary" @click="showAddModal">Add New Customer</button>
     </div>

@@ -1,7 +1,7 @@
 <!-- ListProduct.vue -->
 <template>
   <div class="container">
-    <h2>List of Products</h2>
+    <h2 class="mt-3">List of Products</h2>
     <div class="d-flex justify-content-end mb-4">
       <button class="btn btn-primary" @click="showAddProductModal">Add New Product</button>
     </div>
