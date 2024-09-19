@@ -7,19 +7,19 @@
     <form class="row g-3">
       <div class="col-md-6">
         <label for="inputDate4" class="form-label">Date</label>
-        <input type="Date" class="form-control" id="inputDate4" />
+        <input type="Date" class="form-control" id="inputDate4" required />
       </div>
       <div class="col-md-6">
         <label for="inputName4" class="form-label">Customer Name</label>
-        <input type="text" class="form-control" id="inputName4" />
+        <input type="text" class="form-control" id="inputName4" required />
       </div>
       <div class="col-md-6">
         <label for="inputAddress4" class="form-label">Delivery Address</label>
-        <input type="text" class="form-control" id="inputAddress4" />
+        <input type="text" class="form-control" id="inputAddress4" required />
       </div>
       <div class="col-md-6">
         <label for="inputNumber4" class="form-label">Track Number</label>
-        <input type="text" class="form-control" id="inputNumber4" />
+        <input type="text" class="form-control" id="inputNumber4" required />
       </div>
       <div class="col-md-6 offset-6">
         <label for="inputOrder4" class="form-label">Order Status</label>

@@ -1,7 +1,7 @@
 <!-- ListOrder.vue -->
 <template>
   <div class="container">
-    <h2>List of Orders</h2>
+    <h2 class="mt-3">List of Orders</h2>
     <div class="d-flex justify-content-end mb-4">
       <router-link to="/add-order" class="btn btn-primary">Add New Order</router-link>
     </div>
@@ -81,11 +81,11 @@ const showOrderDetails = (order) => {
   selectedOrder.value = order;
 };
 
-// Function to edit an order (you can redirect to another page or use a modal)
-const editOrderModal = (order) => {
-  console.log("Editing order:", order);
-  selectedOrder.value = order;
-};
+// // Function to edit an order 
+// const editOrderModal = (order) => {
+//   console.log("Editing order:", order);
+//   selectedOrder.value = order;
+// };
 
 // Function to delete an order
 const deleteOrder = (order) => {
