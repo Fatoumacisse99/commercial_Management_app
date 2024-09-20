@@ -29,7 +29,7 @@
       <i class="fas fa-edit mx-2" style="color: #ffc107;"></i>
     </button>
     <button class="btn btn-link p-0" @click="deleteCustomer(customer)" title="Delete">
-      <i class="fas fa-trash mx-2s" style="color: #dc3545;"></i>
+      <i class="fas fa-trash mx-2" style="color: #dc3545;"></i>
     </button>
   </td>
         </tr>

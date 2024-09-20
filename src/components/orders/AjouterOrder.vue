@@ -1,9 +1,11 @@
 <template>
   <div class="container">
+    <h5 class="mt-3">Create New order</h5>
     <div class="mt-3 d-flex justify-content-end mb-4">
       <router-link to="/orders" class="btn btn-secondary me-3">Return to Orders</router-link>
       <a to="/add-order" class="btn btn-primary">Submit</a>
     </div>
+    
     <form class="row g-3">
       <div class="col-md-6">
         <label for="inputDate4" class="form-label">Date</label>

@@ -6,14 +6,14 @@
 
     <div class="container collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto  me-3">
-        <li class="nav-item active">
-          <router-link class="nav-link" to='/' ><i class="fa-solid fa-users mx-2"></i>Customers</router-link>
+        <li class="nav-item active" :class="{ active: $route.name === 'ListCustomer' }">
+          <router-link class="nav-link" to='/' :class="{ 'text-primary': $route.name === 'ListCustomer' }" ><i class="fa-solid fa-users mx-2"></i>Customers</router-link>
         </li>
-        <li class="nav-item">
-          <router-link class="nav-link  " to="/list-product"> <i class="fa-solid fa-box-open mx-2"></i> Products </router-link>
+        <li class="nav-item" :class="{ active: $route.name === 'ListProduct' }">
+          <router-link class="nav-link  " to='/list-product' :class="{ 'text-primary': $route.name === 'ListProduct' }"> <i class="fa-solid fa-box-open mx-2"></i> Products </router-link>
         </li>
-        <li class="nav-item">
-          <router-link class="nav-link" to="/orders"> <i class="fa-solid fa-cart-shopping mx-2"></i> Orders </router-link>
+        <li class="nav-item" :class="{ active: $route.name === 'ListOrder' }">
+          <router-link class="nav-link" to="/orders" :class="{ 'text-primary': $route.name === 'ListOrder' }"> <i class="fa-solid fa-cart-shopping mx-2"></i> Orders </router-link>
         </li>
       </ul>
     </div>
