@@ -2,7 +2,7 @@
 <template>
   <div class="container">
     <h2 class="mt-3">List of Orders</h2>
-    <div class="d-flex justify-content-end mb-4">
+    <div class="d-flex justify-content-end mb-4" >
       <router-link to="/add-order" class="btn btn-primary">Add New Order</router-link>
     </div>
 
@@ -55,10 +55,6 @@ const orders = ref([
 // Function to delete an order
 const deleteOrder = (order) => {
   const confirmation = confirm(`Are you sure you want to delete this order?`);
-  if (confirmation) {
-    orders.value = orders.value.filter(o => o !== order);
-    alert(`Order ${order.trackNumber} has been successfully deleted.`);
-  }
 };
 
 </script>

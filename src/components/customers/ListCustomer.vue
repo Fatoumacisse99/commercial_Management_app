@@ -102,12 +102,9 @@ const editCustomer = (updatedCustomer) => {
 };
 
 // Function to delete a customer
-const deleteCustomer = (customer) => {
-  const confirmation = confirm(`Are you sure you want to delete this customer?`);
-  if (confirmation) {
-    customers.value = customers.value.filter(c => c !== customer);
-    alert(`${customer.name} has been successfully deleted.`);
-  }
+const deleteCustomer = () => {
+confirm(`Are you sure you want to delete this customer?`);
+  
 };
 
 // Function to open the edit modal

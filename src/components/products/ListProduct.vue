@@ -102,10 +102,6 @@ const editProduct = (updatedProduct) => {
 // Function to delete a product
 const deleteProduct = (product) => {
   const confirmation = confirm(`Are you sure you want to delete this product?`);
-  if (confirmation) {
-    products.value = products.value.filter(p => p !== product);
-    alert(`${product.name} has been successfully deleted.`);
-  }
 };
 
 // Function to open the edit modal
