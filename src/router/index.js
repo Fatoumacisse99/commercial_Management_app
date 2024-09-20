@@ -6,6 +6,9 @@ import DetailCustomer from '../components/customers/DetailCustomer.vue';
 import ListProduct from '../components/products/ListProduct.vue';
 import ListOrder from '../components/orders/ListOrder.vue';
 import AjouterOrder from '../components/orders/AjouterOrder.vue';
+import ModifierOrder from '../components/orders/ModifierOrder.vue';
+import DetailOrder from '../components/orders/DetailOrder.vue';
+
 
 
 
@@ -45,7 +48,16 @@ const routes = [
     name: 'AjouterOrder',
     component: AjouterOrder,
   },
-  
+  {
+    path: '/Modifier-Order/:trackNumber',
+    name: 'ModifierOrder',
+    component: ModifierOrder,
+  },
+  {
+    path: '/Detail-Order/:trackNumber',
+    name: 'DetailOrder',
+    component: DetailOrder,
+  },
 ];
 
 const router = createRouter({

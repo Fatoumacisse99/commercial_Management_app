@@ -25,12 +25,12 @@
           <td>{{ order.trackNumber }}</td>
           <td>{{ order.status }}</td>
           <td class="text-center">
-            <button class="btn btn-link p-0" @click="showOrderDetails(order)" title="Details">
-              <i class="fas fa-eye mx-2" style="color: #17a2b8;"></i>
-            </button>
-            <button class="btn btn-link p-0" @click="editOrderModal(order)" title="Edit">
-              <i class="fas fa-edit mx-2" style="color: #ffc107;"></i>
-            </button>
+            <router-link :to="`/detail-order/${order.trackNumber}`" class="btn btn-link p-0" title="View Details">
+  <i class="fas fa-eye mx-2" style="color: #17a2b8;"></i>
+</router-link>
+            <router-link :to="`/Modifier-Order/${order.trackNumber}`" class="btn btn-link p-0" title="Edit">
+  <i class="fas fa-edit mx-2" style="color: #ffc107;"></i>
+</router-link>
             <button class="btn btn-link p-0" @click="deleteOrder(order)" title="Delete">
               <i class="fas fa-trash mx-2" style="color: #dc3545;"></i>
             </button>
@@ -38,28 +38,7 @@
         </tr>
       </tbody>
     </table>
-
-    <!-- Modal for order details (or you can use another method like router navigation) -->
-    <div v-if="selectedOrder" class="modal" tabindex="-1" style="display:block; background:rgba(0, 0, 0, 0.5);">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Order Details</h5>
-            <button type="button" class="btn-close" @click="closeModal"></button>
-          </div>
-          <div class="modal-body">
-            <p><strong>Date:</strong> {{ selectedOrder.date }}</p>
-            <p><strong>Customer:</strong> {{ selectedOrder.customer }}</p>
-            <p><strong>Delivery Address:</strong> {{ selectedOrder.deliveryAddress }}</p>
-            <p><strong>Track Number:</strong> {{ selectedOrder.trackNumber }}</p>
-            <p><strong>Status:</strong> {{ selectedOrder.status }}</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" @click="closeModal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    
   </div>
 </template>
 
@@ -73,20 +52,6 @@ const orders = ref([
   { date: '27/07/2024', customer: 'Alice Martin', deliveryAddress: '789 Pine St, Chicago, IL', trackNumber: 'TN003', status: 'Processing' },
 ]);
 
-// Selected order for details or editing
-const selectedOrder = ref(null);
-
-// Function to show order details
-const showOrderDetails = (order) => {
-  selectedOrder.value = order;
-};
-
-// // Function to edit an order 
-// const editOrderModal = (order) => {
-//   console.log("Editing order:", order);
-//   selectedOrder.value = order;
-// };
-
 // Function to delete an order
 const deleteOrder = (order) => {
   const confirmation = confirm(`Are you sure you want to delete this order?`);
@@ -96,10 +61,6 @@ const deleteOrder = (order) => {
   }
 };
 
-// Close modal
-const closeModal = () => {
-  selectedOrder.value = null;
-};
 </script>
 
 <style scoped>

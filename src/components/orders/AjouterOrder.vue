@@ -104,7 +104,7 @@ const addDetail = () => {
 // Fonction pour supprimer un détail
 const removeDetail = (index) => {
   if (orderDetails.value.length === 1) {
-    alert("Vous ne pouvez pas supprimer le dernier détail.");
+    alert("You can't delete the last remanaining detail.");
   } else {
     orderDetails.value.splice(index, 1);
   }
