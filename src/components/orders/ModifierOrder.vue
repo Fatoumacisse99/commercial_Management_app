@@ -2,7 +2,8 @@
     <div class="container">
         <h5 class="mt-3">Edit Order</h5>
       <div class="mt-3 d-flex justify-content-end mb-4">
-        <button @click="submitOrder" class="btn btn-primary">Submit</button>
+        <router-link to="/orders" class="btn btn-secondary me-3">Return to Orders</router-link>
+        <button  @click="submitOrder" class="btn btn-primary">Submit</button>
       </div>
       <form class="row g-3" @submit.prevent="submitOrder">
         <div class="col-md-6">
@@ -64,7 +65,7 @@
             
             <tr>
               <td colspan="4">
-                <button class="btn btn-success mt-3" @click="addDetail">Add New Detail</button>
+                <button class="btn btn-success mt-3" @click="addDetail">Edit Detail</button>
               </td>
             </tr>
           </tbody>
@@ -102,7 +103,7 @@
   // Chargement des données de la commande existante en utilisant le trackNumber
   onMounted(() => {
     const trackNumber = route.params.trackNumber; // Récupérer le numéro de suivi depuis la route
-    const existingOrder = orders.find(o => o.trackNumber === trackNumber);  // Recherche de la commande
+    const existingOrder = orders.find(o => o.trackNumber === trackNumber);  
     if (existingOrder) {
       order.value = { ...existingOrder };
       orderDetails.value = [...existingOrder.details];
@@ -113,22 +114,14 @@
   const addDetail = () => {
     orderDetails.value.push({ product: '', quantity: 1, price: 0 });
   };
-  
-  // Fonction pour supprimer un détail de commande
-  const removeDetail = (index) => {
+// Fonction pour supprimer un détail
+const removeDetail = (index) => {
+  if (orderDetails.value.length === 1) {
+    alert("You can't delete the last remanaining detail.");
+  } else {
     orderDetails.value.splice(index, 1);
-  };
-  
-  // Fonction pour soumettre la commande
-  const submitOrder = () => {
-    const orderIndex = orders.findIndex(o => o.trackNumber === order.value.trackNumber);
-    if (orderIndex !== -1) {
-      // Mise à jour de la commande existante
-      orders[orderIndex] = { ...order.value, details: [...orderDetails.value] };
-      console.log('Order updated', orders[orderIndex]);
-    }
-    router.push('/orders');  // Retour à la liste des commandes
-  };
+  }
+};
   </script>
   
   <style scoped>
