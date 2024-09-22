@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h5 class="mt-3">Create New order</h5>
+    <h2 class="mt-3">Create New order</h2>
     <div class="mt-3 d-flex justify-content-end mb-4">
       <router-link to="/orders" class="btn btn-secondary me-3">Return to Orders</router-link>
       <a to="/add-order" class="btn btn-primary">Submit</a>
